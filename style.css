@@ -1,181 +1,58 @@
-/* Estilos Gerais */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-body {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Cabeçalho */
 header {
-  background-color: #007f4f;
+  background-color: #333;
   color: white;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-}
-
-header .logo img {
-  height: 50px;
-  margin-right: 10px;
 }
 
 header .logo h1 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 header .menu a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
-  font-size: 16px;
+  padding: 10px;
+  margin: 0 15px;
 }
 
 header .menu a:hover {
-  text-decoration: underline;
+  background-color: #555;
+  border-radius: 5px;
 }
 
-/* Container Geral */
 .container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* Seções */
-.section {
-  padding: 40px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.section ul li {
-  margin: 10px 0;
-}
-
-.section img {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-.section a {
-  color: #007f4f;
-  text-decoration: none;
-}
-
-.section a:hover {
-  text-decoration: underline;
-}
-
-/* Imagens de Destaque */
-.imagem-destaque {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Menu Responsivo */
-@media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header .menu {
-    margin-top: 20px;
-  }
-
-  header .menu a {
-    margin: 10px 0;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
-  .section h2 {
-    font-size: 24px;
-  }
-
-  .section p {
-    font-size: 14px;
-  }
-}
-
-/* Links e Botões */
-a {
-  color: #007f4f;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Estilos de Depoimentos */
-blockquote {
-  background-color: #f9f9f9;
   padding: 20px;
-  border-left: 5px solid #007f4f;
-  margin: 20px 0;
-  font-style: italic;
 }
 
-blockquote p {
-  margin-bottom: 10px;
+h2 {
+  color: #333;
 }
 
-/* Rodapé */
+.section {
+  display: none;
+}
+
 footer {
   background-color: #333;
   color: white;
   padding: 20px;
   text-align: center;
-  margin-top: 40px;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+footer img {
+  width: 100px;
+  margin-top: 10px;
 }
