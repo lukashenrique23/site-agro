@@ -1,58 +1,147 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Cabeçalho */
 header {
-  background-color: #333;
+  background-color: #228B22;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 header nav {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 header .logo h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+header .menu {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 header .menu a {
   color: white;
   text-decoration: none;
-  padding: 10px;
   margin: 0 15px;
+  font-weight: bold;
+  padding: 10px;
 }
 
 header .menu a:hover {
-  background-color: #555;
-  border-radius: 5px;
+  background-color: #1e7a1e;
+  border-radius: 4px;
 }
 
+/* Container principal */
 .container {
+  max-width: 1100px;
+  margin: 20px auto;
   padding: 20px;
 }
 
-h2 {
-  color: #333;
-}
-
+/* Seções */
 .section {
-  display: none;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.section h2 {
+  margin-bottom: 15px;
+  color: #228B22;
+}
+
+.section p, .section ul {
+  margin-bottom: 15px;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.section em {
+  color: #888;
+}
+
+/* Formulário de Contato */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #228B22;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1e7a1e;
+}
+
+/* Rodapé */
 footer {
   background-color: #333;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
 }
 
-footer img {
-  width: 100px;
-  margin-top: 10px;
+/* Responsividade */
+@media(max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header .menu {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  header .menu a {
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .section h2 {
+    font-size: 1.5em;
+  }
 }
