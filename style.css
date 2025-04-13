@@ -1,22 +1,23 @@
-/* Reset básico */
+/* Estilos Gerais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Estilo geral do corpo */
 body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
-  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #4CAF50;
+  background-color: #007f4f;
   color: white;
   padding: 20px 0;
 }
@@ -25,7 +26,9 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header .logo {
@@ -38,208 +41,141 @@ header .logo img {
   margin-right: 10px;
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: bold;
+header .logo h1 {
+  font-size: 24px;
 }
 
 header .menu a {
-  text-decoration: none;
   color: white;
   margin: 0 15px;
-  font-size: 1.1rem;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 header .menu a:hover {
-  color: #dcdcdc;
+  text-decoration: underline;
 }
 
-/* Estilo das seções */
-.section {
-  padding: 40px 30px;
-  margin: 20px auto;
+/* Container Geral */
+.container {
   max-width: 1200px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-h2 {
-  font-size: 2.5rem;
-  color: #333;
+/* Seções */
+.section {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.section h2 {
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
-h3 {
-  font-size: 2rem;
-  margin-top: 20px;
-  color: #4CAF50;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.section p {
+  font-size: 16px;
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
+.section ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Seção de vendas */
-#vendas .item-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+.section ul li {
+  margin: 10px 0;
 }
 
-#vendas .item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  width: 45%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-#vendas .item:hover {
-  transform: scale(1.05);
-}
-
-#vendas h3 {
-  color: #4CAF50;
-}
-
-#vendas .item h4 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-#vendas .item p {
-  color: #666;
-  margin-bottom: 15px;
-}
-
-#vendas button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-#vendas button:hover {
-  background-color: #45a049;
-}
-
-/* Formulário de Contato */
-form {
-  display: grid;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-  font-size: 1.1rem;
-}
-
-form input, form textarea {
-  padding: 10px;
-  font-size: 1rem;
+.section img {
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 
-form button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 15px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.section a {
+  color: #007f4f;
+  text-decoration: none;
 }
 
-form button:hover {
-  background-color: #45a049;
+.section a:hover {
+  text-decoration: underline;
 }
 
-/* Rodapé */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+/* Imagens de Destaque */
+.imagem-destaque {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-footer .footer-logo {
-  width: 50px;
-  margin-top: 10px;
-}
-
-/* Responsividade */
+/* Menu Responsivo */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+  }
+
+  header .menu {
+    margin-top: 20px;
   }
 
   header .menu a {
     margin: 10px 0;
   }
 
-  .section {
-    padding: 20px;
-    margin: 10px;
+  .container {
+    padding: 0 10px;
   }
 
-  #vendas .item-list {
-    flex-direction: column;
-    align-items: center;
+  .section h2 {
+    font-size: 24px;
   }
 
-  #vendas .item {
-    width: 80%;
-  }
-
-  form {
-    width: 90%;
+  .section p {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
+/* Links e Botões */
+a {
+  color: #007f4f;
+}
 
-  h2 {
-    font-size: 2rem;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  h3 {
-    font-size: 1.6rem;
-  }
+/* Estilos de Depoimentos */
+blockquote {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 5px solid #007f4f;
+  margin: 20px 0;
+  font-style: italic;
+}
 
-  p {
-    font-size: 1rem;
-  }
+blockquote p {
+  margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
