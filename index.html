@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agronegócios Inovadores</title>
+  <title>Portal do Agronegócio</title>
   <style>
     * {
       margin: 0;
@@ -12,166 +12,145 @@
       box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f4f4f4;
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
-      background: #228B22;
-      color: #fff;
-      padding: 20px 0;
+      background-color: #004d40;
+      padding: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 1.8em;
     }
     nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-      flex-wrap: wrap;
+      background-color: #00796b;
+      padding: 10px;
+      text-align: center;
     }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo img {
-      height: 40px;
-    }
-    nav .menu {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    nav .menu a {
-      color: #fff;
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: bold;
+      font-size: 1em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00796b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
-    .container {
-      max-width: 1100px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-    .section {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: none;
-    }
-    .section.active {
-      display: block;
-    }
-    .section h2 {
-      margin-bottom: 10px;
-      color: #228B22;
+    form button:hover {
+      background-color: #004d40;
     }
     footer {
-      background: #333;
-      color: #fff;
+      background-color: #004d40;
+      color: white;
       text-align: center;
-      padding: 20px 10px;
+      padding: 20px;
     }
     footer img {
-      height: 30px;
-      margin-top: 10px;
-    }
-    @media(max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-      nav .menu {
-        margin-top: 10px;
-      }
+      height: 40px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
+
 <body>
+  <!-- Cabeçalho -->
   <header>
-    <nav>
-      <div class="logo">
-        <img src="FANZENDA.png" alt="Logo da Fazenda">
-        <h1>Agronegócios Inovadores</h1>
-      </div>
-      <div class="menu">
-        <a onclick="showSection('home')">Home</a>
-        <a onclick="showSection('sobre')">Sobre Nós</a>
-        <a onclick="showSection('servicos')">Serviços</a>
-        <a onclick="showSection('produtos')">Produtos</a>
-        <a onclick="showSection('noticias')">Notícias/Blog</a>
-        <a onclick="showSection('depoimentos')">Depoimentos</a>
-        <a onclick="showSection('contato')">Contato</a>
-        <a onclick="showSection('oque')">O que é o Agronegócio</a>
-      </div>
-    </nav>
+    <img src="FAZENDA.png" alt="Logo da Fazenda">
+    <h1>Portal do Agronegócio</h1>
   </header>
 
-  <div class="container">
-    <section id="home" class="section active">
-      <h2>Bem-vindo ao Agronegócios Inovadores</h2>
-      <p>Conectando o campo à inovação. Explore nosso site para conhecer as soluções que transformam o agronegócio!</p>
-    </section>
+  <!-- Navegação -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#oque">O que é Agronegócio</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-    <section id="sobre" class="section">
-      <h2>Sobre Nós</h2>
-      <p>Somos um projeto dedicado a modernizar o agronegócio. Nossa história é marcada pela paixão pelo campo e pela busca incessante por soluções inovadoras.</p>
-    </section>
+  <!-- Seções -->
+  <section id="home">
+    <h2>Bem-vindo ao Portal do Agronegócio</h2>
+    <p>Conectamos inovação, sustentabilidade e produtividade para transformar o campo. Aqui você encontrará tudo sobre soluções agrícolas modernas, financiamento rural, e as últimas notícias do setor.</p>
+  </section>
 
-    <section id="servicos" class="section">
-      <h2>Serviços</h2>
-      <ul>
-        <li>Consultoria agrícola</li>
-        <li>Gestão de propriedades rurais</li>
-        <li>Tecnologias para o campo</li>
-      </ul>
-    </section>
+  <section id="oque">
+    <h2>O que é Agronegócio?</h2>
+    <p>O agronegócio é um dos setores mais importantes da economia brasileira e mundial. Ele engloba todas as atividades relacionadas à produção, industrialização e distribuição de produtos agropecuários. Isso inclui desde o cultivo de grãos e criação de animais, até a transformação desses produtos em bens de consumo e sua comercialização.</p>
+    <p>Esse setor envolve diversos agentes como produtores rurais, indústrias de insumos, cooperativas, transportadoras, comerciantes, exportadores e instituições financeiras. Além disso, o agronegócio é altamente dependente da tecnologia e inovação para aumentar a produtividade, reduzir impactos ambientais e garantir alimentos de qualidade para a população.</p>
+    <p>O Brasil se destaca mundialmente como um dos maiores exportadores de produtos agrícolas, sendo líder em diversas cadeias produtivas como soja, carne bovina, frango e café.</p>
+    <p>Com práticas sustentáveis, uso de inteligência artificial, automação no campo e crédito rural eficiente, o agronegócio representa o futuro do desenvolvimento econômico do país.</p>
+  </section>
 
-    <section id="produtos" class="section">
-      <h2>Produtos</h2>
-      <p>Conheça nosso catálogo de produtos, com descrição detalhada e benefícios de cada item.</p>
-    </section>
+  <section id="servicos">
+    <h2>Serviços Oferecidos</h2>
+    <ul>
+      <li>Consultoria agrícola especializada</li>
+      <li>Financiamentos e linhas de crédito para o campo</li>
+      <li>Gestão de propriedades rurais</li>
+      <li>Implementação de tecnologias agrícolas</li>
+      <li>Programas de capacitação e treinamento</li>
+      <li>Avaliação de impacto ambiental e sustentabilidade</li>
+    </ul>
+  </section>
 
-    <section id="noticias" class="section">
-      <h2>Notícias / Blog</h2>
-      <p>Acompanhe as últimas tendências e dicas do agronegócio, inovações tecnológicas e muito mais.</p>
-    </section>
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>Entre em contato para tirar dúvidas, solicitar consultoria ou saber mais sobre nossos serviços.</p>
+    <p>Email: contato@portaldoagronegocio.com.br</p>
+    <p>Telefone: (00) 0000-0000</p>
+    <form>
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" rows="4"></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-    <section id="depoimentos" class="section">
-      <h2>Depoimentos</h2>
-      <p>Confira o que nossos clientes têm a dizer!</p>
-    </section>
-
-    <section id="contato" class="section">
-      <h2>Contato</h2>
-      <p>Entre em contato conosco para mais informações ou para solicitar nossos serviços.</p>
-    </section>
-
-    <section id="oque" class="section">
-      <h2>O que é o Agronegócio</h2>
-      <p>O agronegócio é um setor vital da economia, especialmente em países como o Brasil, onde desempenha um papel crucial no desenvolvimento social e econômico. Ele engloba toda a cadeia produtiva relacionada à produção, processamento, comercialização e distribuição de produtos agrícolas e pecuários.</p>
-      <p>O agronegócio não se limita apenas aos produtores rurais, mas também inclui uma rede de empresas que atuam em diversas áreas, como fornecedores de insumos, agroindústrias, empresas de logística, pesquisa e tecnologia.</p>
-      <p>Esse setor é responsável por garantir a segurança alimentar, não só para os brasileiros, mas também para o mundo. Além disso, está na vanguarda da inovação, com tecnologias como drones, sensores e softwares que otimizam a produção.</p>
-      <p>A sustentabilidade também tem ganhado destaque, com práticas como agricultura de baixo carbono e preservação ambiental. O setor é fundamental para a geração de empregos, inclusão social e crescimento econômico.</p>
-      <p>Portanto, o agronegócio é um pilar econômico, inovador e sustentável, essencial para o futuro do país e do planeta.</p>
-    </section>
-  </div>
-
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Agronegócios Inovadores. Todos os direitos reservados.</p>
     <img src="escola.png" alt="Logo da Escola">
+    <p>&copy; 2025 Portal do Agronegócio - Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
 </body>
-</html>
 
+</html>
