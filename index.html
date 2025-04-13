@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agronegócios Inovadores</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll(".section");
-      const menuLinks = document.querySelectorAll(".menu a");
-
-      sections.forEach(section => {
-        if (section.id !== "home") {
-          section.style.display = "none";
-        }
-      });
-
-      function showSection(id) {
-        sections.forEach(section => {
-          section.style.display = section.id === id ? "block" : "none";
-        });
-      }
-
-      menuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
-          showSection(targetId);
-        });
-      });
-    });
-  </script>
 </head>
+
 <body>
+  <!-- Cabeçalho com Logo -->
   <header>
     <nav>
       <div class="logo">
@@ -42,88 +19,213 @@
       <div class="menu">
         <a href="#home">Home</a>
         <a href="#sobre">Sobre Nós</a>
-        <a href="#conceito">O que é Agronegócio?</a>
+        <a href="#agronegocio">O que é Agronegócio?</a>
         <a href="#servicos">Serviços</a>
         <a href="#sustentabilidade">Sustentabilidade</a>
         <a href="#produtos">Produtos</a>
         <a href="#noticias">Notícias/Blog</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
-        <a href="#negociacoes">Negociações</a>
       </div>
     </nav>
   </header>
 
   <div class="container">
-    <!-- Seções já existentes -->
-    <!-- Adicione aqui as seções de home, sobre, conceito, etc. -->
-
-    <!-- Seção de Negociações -->
-    <section id="negociacoes" class="section">
-      <h2>Negociações</h2>
-      <p>Aqui você pode explorar oportunidades de compra e venda de produtos, animais, fazendas e máquinas agrícolas.</p>
-
-      <h3>🐄 Animais</h3>
-      <div class="item-list">
-        <div class="item">
-          <h4>Gado Nelore</h4>
-          <p>Lote com 20 cabeças, vacinados e prontos para engorda.</p>
-          <button>Ver detalhes</button>
-        </div>
-        <div class="item">
-          <h4>Frangos caipiras</h4>
-          <p>Produção familiar, venda em atacado para frigoríficos e mercados.</p>
-          <button>Ver detalhes</button>
-        </div>
-      </div>
-
-      <h3>🌾 Produtos Agrícolas</h3>
-      <div class="item-list">
-        <div class="item">
-          <h4>Soja a granel</h4>
-          <p>Safra 2025, produção certificada, pronta para exportação.</p>
-          <button>Ver detalhes</button>
-        </div>
-        <div class="item">
-          <h4>Milho seco ensacado</h4>
-          <p>100 sacas disponíveis, ideal para ração animal.</p>
-          <button>Ver detalhes</button>
-        </div>
-      </div>
-
-      <h3>🚜 Máquinas Agrícolas</h3>
-      <div class="item-list">
-        <div class="item">
-          <h4>Trator Massey Ferguson 275</h4>
-          <p>Revisado, ano 2019, excelente estado de conservação.</p>
-          <button>Ver detalhes</button>
-        </div>
-        <div class="item">
-          <h4>Colheitadeira John Deere S550</h4>
-          <p>Alta performance, com menos de 2.000h de uso.</p>
-          <button>Ver detalhes</button>
-        </div>
-      </div>
-
-      <h3>🏡 Fazendas</h3>
-      <div class="item-list">
-        <div class="item">
-          <h4>Fazenda São José – MT</h4>
-          <p>500 hectares, área mecanizável, casa sede, curral e açude.</p>
-          <button>Ver detalhes</button>
-        </div>
-        <div class="item">
-          <h4>Chácara em MG</h4>
-          <p>Ideal para agroecologia e turismo rural. 10 hectares com riacho.</p>
-          <button>Ver detalhes</button>
-        </div>
-      </div>
+    <!-- Página Inicial -->
+    <section id="home" class="section">
+      <h2>Bem-vindo ao Agronegócios Inovadores</h2>
+      <p>Conectando o campo à inovação. Explore nosso site para conhecer as soluções que transformam o agronegócio!</p>
     </section>
+
+   <!-- O que é o Agronegócio? -->
+<section id="agronegocio" class="section">
+  <h2>O que é o Agronegócio?</h2>
+  <p>O agronegócio é um conjunto de atividades econômicas relacionadas à produção, processamento e comercialização de produtos agrícolas e pecuários. Ele envolve diversos setores, desde a produção de insumos até o consumo final de alimentos, fibras e outros produtos originados da agricultura e da pecuária.</p>
+
+  <p>Este setor é essencial não apenas para a alimentação humana, mas também para o fornecimento de matérias-primas industriais e energéticas, e ainda para o desenvolvimento de biocombustíveis e medicamentos.</p>
+
+  <h3>Principais Áreas do Agronegócio</h3>
+  <ul>
+    <li><strong>Produção Primária:</strong> Envolve o cultivo de grãos, hortaliças, frutas, e a criação de animais para carne, leite e ovos.</li>
+    <li><strong>Indústria de Processamento:</strong> A transformação dos produtos primários em alimentos embalados, conservas, produtos de carne processada, entre outros.</li>
+    <li><strong>Distribuição e Comercialização:</strong> Refere-se ao transporte e à venda desses produtos aos consumidores, sejam em mercados locais ou internacionais.</li>
+    <li><strong>Pesquisa e Inovação:</strong> A pesquisa agrícola, com o desenvolvimento de novos cultivares, tecnologias agrícolas e melhores práticas para maximizar a produção e sustentabilidade.</li>
+  </ul>
+
+  <h3>Importância Econômica do Agronegócio</h3>
+  <p>O agronegócio é um dos pilares da economia mundial. No Brasil, por exemplo, ele representa uma parte significativa do PIB (Produto Interno Bruto) e é responsável por uma grande parcela das exportações do país, especialmente no que diz respeito a commodities como soja, café, carne bovina, e suco de laranja.</p>
+  
+  <p>A produção de alimentos e o comércio global de produtos agrícolas sustentam milhões de empregos ao redor do mundo, desde pequenos produtores rurais até grandes corporações. O agronegócio também está diretamente ligado ao avanço de tecnologias como a biotecnologia, que desenvolve soluções para melhorar a produtividade e a resistência das plantações.</p>
+
+  <h3>Desafios do Agronegócio</h3>
+  <p>Embora o agronegócio seja fundamental para a economia global, ele enfrenta diversos desafios, tais como:</p>
+  <ul>
+    <li><strong>Sustentabilidade Ambiental:</strong> A necessidade de adaptar a produção agrícola e pecuária a práticas mais sustentáveis para evitar o esgotamento de recursos naturais e o impacto ambiental negativo.</li>
+    <li><strong>Mudanças Climáticas:</strong> A imprevisibilidade do clima e a escassez de recursos hídricos podem afetar a produção agrícola, criando desafios para a segurança alimentar global.</li>
+    <li><strong>Globalização e Comércio Internacional:</strong> A competição crescente e a dependência do comércio internacional exigem que os produtores estejam cada vez mais preparados para atender às normas globais de qualidade e sustentabilidade.</li>
+    <li><strong>Inovação Tecnológica:</strong> O agronegócio exige a adoção de novas tecnologias, como a agricultura de precisão e a inteligência artificial, para melhorar a produtividade e a eficiência.</li>
+  </ul>
+
+  <h3>O Futuro do Agronegócio</h3>
+  <p>Com o avanço da tecnologia e as crescentes necessidades de uma população mundial que cresce cada vez mais, o futuro do agronegócio será marcado pela adoção de práticas agrícolas mais eficientes e sustentáveis. Tecnologias como drones, sensores, inteligência artificial, e biotecnologia serão essenciais para transformar o setor e atender à demanda crescente por alimentos e produtos agrícolas.</p>
+
+  <p>A inovação e a colaboração entre os produtores, as empresas de tecnologia, e as organizações governamentais e ambientais serão fundamentais para garantir que o agronegócio continue a prosperar de maneira sustentável, enquanto atende às necessidades do mundo moderno.</p>
+</section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="section">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma equipe apaixonada por inovação no campo. Nossa missão é transformar a produção agrícola por meio de tecnologias acessíveis e práticas sustentáveis.</p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section">
+      <h2>Serviços</h2>
+      <p>Oferecemos consultoria, gestão rural e inovação tecnológica para otimizar a produção no campo e garantir melhores resultados.</p>
+    </section>
+
+    <!-- Sustentabilidade -->
+    <section id="sustentabilidade" class="section">
+      <h2>Sustentabilidade no Agronegócio</h2>
+      <p>A sustentabilidade é a base de nossas operações. Ajudamos os produtores a adotarem práticas que preservem os recursos naturais e a biodiversidade.</p>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="section">
+      <h2>Produtos</h2>
+      <p>Oferecemos uma vasta gama de insumos e soluções tecnológicas para o agronegócio. Fique atento ao nosso catálogo!</p>
+    </section>
+
+    <!-- Notícias / Blog -->
+    <section id="noticias" class="section">
+      <h2>Notícias / Blog</h2>
+      <p>Aqui você encontrará as últimas novidades sobre o setor, incluindo tendências e inovações no agronegócio.</p>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section">
+      <h2>Depoimentos</h2>
+      <p>"Graças às soluções que implementamos, nossa produtividade aumentou significativamente!" - João, produtor.</p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para mais informações ou solicitar nossos serviços.</p>
+      <form action="#">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
   </div>
 
+  <!-- Rodapé com logo da escola -->
   <footer>
     <p>&copy; 2025 Agronegócios Inovadores. Todos os direitos reservados.</p>
     <img src="escola.png" alt="Logo Escola" class="footer-logo" />
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section");
+      const menuLinks = document.querySelectorAll(".menu a");
+
+      // Esconde todas as seções inicialmente, menos a Home
+      sections.forEach(section => {
+        if (section.id !== "home") {
+          section.style.display = "none";
+        }
+      });
+
+      // Função que mostra a seção clicada e esconde as outras
+      function showSection(id) {
+        sections.forEach(section => {
+          section.style.display = section.id === id ? "block" : "none";
+        });
+      }
+
+      // Adiciona evento de clique às guias do menu
+      menuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // impede comportamento padrão de ir para a âncora
+          const targetId = this.getAttribute("href").substring(1);
+          showSection(targetId);
+        });
+      });
+    });
+  </script>
+  <!-- Vendas (Produtos, Animais, Máquinas, Fazendas) -->
+<section id="vendas" class="section">
+  <h2>Venda de Produtos, Animais, Máquinas e Fazendas</h2>
+  <p>Aqui você pode explorar as opções de compra e venda de produtos agrícolas, animais, máquinas e propriedades rurais. Se você estiver interessado em algum item, entre em contato para mais detalhes.</p>
+
+  <h3>🐄 Animais à Venda</h3>
+  <div class="item-list">
+    <div class="item">
+      <h4>Gado Nelore</h4>
+      <p>Lote com 30 cabeças de gado Nelore, com excelente genética para corte, vacinados e prontos para engorda.</p>
+      <button>Ver detalhes</button>
+    </div>
+    <div class="item">
+      <h4>Frangos Caipiras</h4>
+      <p>Venda de frangos caipiras para mercados e frigoríficos, com produção orgânica e sem antibióticos.</p>
+      <button>Ver detalhes</button>
+    </div>
+  </div>
+
+  <h3>🌾 Produtos Agrícolas à Venda</h3>
+  <div class="item-list">
+    <div class="item">
+      <h4>Soja - Safra 2025</h4>
+      <p>Produção certificada, pronta para exportação, com alto rendimento e qualidade superior.</p>
+      <button>Ver detalhes</button>
+    </div>
+    <div class="item">
+      <h4>Milho Seco Ensacado</h4>
+      <p>100 sacas de milho seco, ideal para ração animal. Disponível para venda imediata.</p>
+      <button>Ver detalhes</button>
+    </div>
+  </div>
+
+  <h3>🚜 Máquinas Agrícolas à Venda</h3>
+  <div class="item-list">
+    <div class="item">
+      <h4>Trator Massey Ferguson 275</h4>
+      <p>Trator em excelente estado de conservação, ano 2019, com baixo número de horas de uso.</p>
+      <button>Ver detalhes</button>
+    </div>
+    <div class="item">
+      <h4>Colheitadeira John Deere S550</h4>
+      <p>Colheitadeira com menos de 2.000 horas de uso, alta performance e baixo consumo de combustível.</p>
+      <button>Ver detalhes</button>
+    </div>
+  </div>
+
+  <h3>🏡 Fazendas à Venda</h3>
+  <div class="item-list">
+    <div class="item">
+      <h4>Fazenda São José – MT</h4>
+      <p>500 hectares, área mecanizável, com casa sede, curral e açude. Ideal para cultivo de grãos e pecuária.</p>
+      <button>Ver detalhes</button>
+    </div>
+    <div class="item">
+      <h4>Chácara em MG</h4>
+      <p>10 hectares com riacho e área para agroecologia e turismo rural. Localizada em região privilegiada.</p>
+      <button>Ver detalhes</button>
+    </div>
+  </div>
+
+</section>
+
 </body>
+
 </html>
