@@ -11,12 +11,14 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #004d40;
       padding: 20px;
@@ -24,47 +26,64 @@
       display: flex;
       align-items: center;
     }
+
     header img {
       height: 60px;
       margin-right: 15px;
     }
+
     header h1 {
       font-size: 1.8em;
     }
+
     nav {
       background-color: #00796b;
       padding: 10px;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1em;
+      cursor: pointer;
     }
+
     section {
+      display: none;
       padding: 40px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
+    section.active {
+      display: block;
+    }
+
     section:nth-child(even) {
       background-color: #f0f0f0;
     }
+
     h2 {
       margin-bottom: 20px;
       color: #00796b;
     }
+
     ul {
       padding-left: 20px;
     }
-    form input, form textarea {
+
+    form input,
+    form textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     form button {
       background-color: #00796b;
       color: white;
@@ -73,20 +92,38 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     form button:hover {
       background-color: #004d40;
     }
+
     footer {
       background-color: #004d40;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     footer img {
       height: 40px;
       margin-bottom: 10px;
     }
   </style>
+  <script>
+    function showSection(id) {
+      // Esconde todas as seções
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Exibe a seção correspondente ao clique
+      const targetSection = document.getElementById(id);
+      if (targetSection) {
+        targetSection.classList.add('active');
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -98,14 +135,14 @@
 
   <!-- Navegação -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#oque">O que é Agronegócio</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('oque')">O que é Agronegócio</a>
+    <a onclick="showSection('servicos')">Serviços</a>
+    <a onclick="showSection('contato')">Contato</a>
   </nav>
 
   <!-- Seções -->
-  <section id="home">
+  <section id="home" class="active">
     <h2>Bem-vindo ao Portal do Agronegócio</h2>
     <p>Conectamos inovação, sustentabilidade e produtividade para transformar o campo. Aqui você encontrará tudo sobre soluções agrícolas modernas, financiamento rural, e as últimas notícias do setor.</p>
     <p>É com grande entusiasmo que apresentamos este portal dedicado a unir inovação e tradição no campo. Aqui, você encontrará soluções modernas para o agronegócio, com foco em sustentabilidade, tecnologias de ponta e capacitação para enfrentar os desafios do setor.</p>
@@ -128,15 +165,6 @@
     <p><strong>A Importância do Agronegócio para a Economia Global</strong></p>
     <p>O agronegócio é essencial para a segurança alimentar mundial. Ele é responsável por fornecer alimentos, fibras e matérias-primas essenciais à sobrevivência humana e à indústria. Além disso, é um setor que gera milhões de empregos diretamente nas fazendas, agroindústrias, transporte e distribuição de produtos, além de criar uma grande quantidade de empregos indiretos.</p>
     <p>No Brasil, por exemplo, o agronegócio é o motor da economia, representando uma grande parcela do Produto Interno Bruto (PIB). O país é um dos maiores produtores e exportadores de commodities agrícolas como soja, milho, carne bovina, frango e café, contribuindo significativamente para o abastecimento global de alimentos e para o crescimento de diversas economias ao redor do mundo.</p>
-    <p><strong>Tecnologia e Inovação no Agronegócio</strong></p>
-    <p>Nos últimos anos, o agronegócio tem se modernizado com a introdução de tecnologias inovadoras. O uso de drones, sensores, big data, inteligência artificial e automação têm otimizado as operações agrícolas, tornando a produção mais eficiente e sustentável. A tecnologia tem permitido a agricultura de precisão, onde cada ação no campo é monitorada e ajustada de acordo com dados em tempo real, o que ajuda a reduzir custos, melhorar a qualidade dos produtos e aumentar os rendimentos das lavouras.</p>
-    <p>Além disso, o uso de biotecnologia, como sementes geneticamente modificadas, e a adoção de práticas agrícolas mais sustentáveis, como o uso de fertilizantes e pesticidas de baixo impacto ambiental, têm sido fundamentais para garantir a segurança alimentar, reduzir os impactos ambientais e melhorar a qualidade do solo.</p>
-    <p><strong>Desafios e Sustentabilidade</strong></p>
-    <p>Apesar de seu enorme potencial, o agronegócio enfrenta alguns desafios, como a necessidade de se adaptar às mudanças climáticas, a pressão por práticas mais sustentáveis e o aumento da demanda global por alimentos de qualidade. A sustentabilidade tem ganhado destaque, e práticas como a agricultura de baixo carbono, o uso racional de recursos naturais e a preservação de ecossistemas têm se tornado cada vez mais essenciais para a manutenção da produção no longo prazo.</p>
-    <p>É fundamental que o setor agrícola equilibre a busca por produtividade com a responsabilidade ambiental, garantindo que os recursos naturais sejam usados de forma eficiente e sem causar danos irreversíveis ao meio ambiente.</p>
-    <p><strong>Conclusão</strong></p>
-    <p>O agronegócio é uma força vital na economia mundial, não apenas por ser responsável pela produção de alimentos, mas também por ser um setor que gera emprego, promove inovações tecnológicas e sustenta o comércio global. No Brasil, o agronegócio continua a ser um pilar fundamental, e seu impacto se estende além das fronteiras nacionais, influenciando economias e mercados ao redor do mundo.</p>
-    <p>Com uma crescente ênfase em sustentabilidade, inovação e tecnologia, o agronegócio tem um papel central no futuro da humanidade, pois garante o fornecimento de alimentos e outros produtos essenciais, enquanto trabalha para proteger o meio ambiente e melhorar a qualidade de vida dos envolvidos neste vasto e dinâmico setor.</p>
   </section>
 
   <section id="servicos">
