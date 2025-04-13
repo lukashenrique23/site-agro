@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agronegócios Inovadores</title>
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -18,7 +17,6 @@
       background: #f4f4f4;
       color: #333;
     }
-    /* Cabeçalho e Navegação */
     header {
       background: #228B22;
       color: #fff;
@@ -33,8 +31,13 @@
       padding: 0 20px;
       flex-wrap: wrap;
     }
-    nav .logo h1 {
-      font-size: 1.8em;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 40px;
     }
     nav .menu {
       display: flex;
@@ -45,63 +48,38 @@
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
+      cursor: pointer;
     }
-    /* Container principal */
     .container {
       max-width: 1100px;
       margin: 20px auto;
       padding: 20px;
     }
-    /* Seções */
     .section {
       background: #fff;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .section.active {
+      display: block;
     }
     .section h2 {
       margin-bottom: 10px;
       color: #228B22;
     }
-    .section p, .section ul {
-      margin-bottom: 10px;
-    }
-    .section ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-    /* Formulário de contato */
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      background: #228B22;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #1e7a1e;
-    }
-    /* Rodapé */
     footer {
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 20px 10px;
     }
-    /* Responsividade */
+    footer img {
+      height: 30px;
+      margin-top: 10px;
+    }
     @media(max-width: 768px) {
       nav {
         flex-direction: column;
@@ -113,97 +91,87 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho e Menu de Navegação -->
   <header>
     <nav>
       <div class="logo">
+        <img src="FANZENDA.png" alt="Logo da Fazenda">
         <h1>Agronegócios Inovadores</h1>
       </div>
       <div class="menu">
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#noticias">Notícias/Blog</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato">Contato</a>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('sobre')">Sobre Nós</a>
+        <a onclick="showSection('servicos')">Serviços</a>
+        <a onclick="showSection('produtos')">Produtos</a>
+        <a onclick="showSection('noticias')">Notícias/Blog</a>
+        <a onclick="showSection('depoimentos')">Depoimentos</a>
+        <a onclick="showSection('contato')">Contato</a>
+        <a onclick="showSection('oque')">O que é o Agronegócio</a>
       </div>
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
   <div class="container">
-    <!-- Página Inicial -->
-    <section id="home" class="section">
+    <section id="home" class="section active">
       <h2>Bem-vindo ao Agronegócios Inovadores</h2>
       <p>Conectando o campo à inovação. Explore nosso site para conhecer as soluções que transformam o agronegócio!</p>
     </section>
 
-    <!-- Sobre Nós -->
     <section id="sobre" class="section">
       <h2>Sobre Nós</h2>
       <p>Somos um projeto dedicado a modernizar o agronegócio. Nossa história é marcada pela paixão pelo campo e pela busca incessante por soluções inovadoras.</p>
-      <p><strong>Missão:</strong> Prover soluções de alta qualidade para a gestão e produção agrícola.</p>
-      <p><strong>Visão:</strong> Ser referência em inovação no agronegócio, contribuindo para o desenvolvimento sustentável do setor.</p>
-      <p><strong>Valores:</strong> Transparência, inovação, sustentabilidade e responsabilidade.</p>
     </section>
 
-    <!-- Serviços -->
     <section id="servicos" class="section">
       <h2>Serviços</h2>
       <ul>
         <li>Consultoria agrícola</li>
         <li>Gestão de propriedades rurais</li>
-        <li>Tecnologias para o campo (drones, sensores, softwares)</li>
-        <li>Comercialização de insumos (sementes, fertilizantes, defensivos)</li>
-        <li>Suporte técnico e capacitação</li>
+        <li>Tecnologias para o campo</li>
       </ul>
     </section>
 
-    <!-- Produtos -->
     <section id="produtos" class="section">
       <h2>Produtos</h2>
       <p>Conheça nosso catálogo de produtos, com descrição detalhada e benefícios de cada item.</p>
-      <p><em>Foto e ficha técnica de cada produto serão disponibilizadas em breve.</em></p>
     </section>
 
-    <!-- Notícias / Blog -->
     <section id="noticias" class="section">
       <h2>Notícias / Blog</h2>
-      <p>Acompanhe as últimas tendências e dicas do agronegócio, inovações tecnológicas, e atualizações sobre mudanças climáticas e políticas do setor.</p>
+      <p>Acompanhe as últimas tendências e dicas do agronegócio, inovações tecnológicas e muito mais.</p>
     </section>
 
-    <!-- Depoimentos / Casos de Sucesso -->
     <section id="depoimentos" class="section">
-      <h2>Depoimentos / Casos de Sucesso</h2>
-      <p>Confira o que nossos clientes têm a dizer e veja os resultados alcançados com nossas soluções.</p>
+      <h2>Depoimentos</h2>
+      <p>Confira o que nossos clientes têm a dizer!</p>
     </section>
 
-    <!-- Contato -->
     <section id="contato" class="section">
       <h2>Contato</h2>
       <p>Entre em contato conosco para mais informações ou para solicitar nossos serviços.</p>
-      <p><strong>Email:</strong> contato@agronegociosinovadores.com.br</p>
-      <p><strong>Telefone:</strong> (xx) xxxx-xxxx</p>
-      <p>Ou utilize o formulário de contato abaixo:</p>
-      <form action="#" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
+    </section>
+
+    <section id="oque" class="section">
+      <h2>O que é o Agronegócio</h2>
+      <p>O agronegócio é um setor vital da economia, especialmente em países como o Brasil, onde desempenha um papel crucial no desenvolvimento social e econômico. Ele engloba toda a cadeia produtiva relacionada à produção, processamento, comercialização e distribuição de produtos agrícolas e pecuários.</p>
+      <p>O agronegócio não se limita apenas aos produtores rurais, mas também inclui uma rede de empresas que atuam em diversas áreas, como fornecedores de insumos, agroindústrias, empresas de logística, pesquisa e tecnologia.</p>
+      <p>Esse setor é responsável por garantir a segurança alimentar, não só para os brasileiros, mas também para o mundo. Além disso, está na vanguarda da inovação, com tecnologias como drones, sensores e softwares que otimizam a produção.</p>
+      <p>A sustentabilidade também tem ganhado destaque, com práticas como agricultura de baixo carbono e preservação ambiental. O setor é fundamental para a geração de empregos, inclusão social e crescimento econômico.</p>
+      <p>Portanto, o agronegócio é um pilar econômico, inovador e sustentável, essencial para o futuro do país e do planeta.</p>
     </section>
   </div>
 
-  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Agronegócios Inovadores. Todos os direitos reservados.</p>
+    <img src="escola.png" alt="Logo da Escola">
   </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
+
