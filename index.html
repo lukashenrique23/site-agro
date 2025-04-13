@@ -1,4 +1,35 @@
 <!DOCTYPE html>
+<script>
+  // Quando a página carregar
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+    const menuLinks = document.querySelectorAll(".menu a");
+
+    // Esconde todas as seções inicialmente, menos a Home
+    sections.forEach(section => {
+      if (section.id !== "home") {
+        section.style.display = "none";
+      }
+    });
+
+    // Função que mostra a seção clicada e esconde as outras
+    function showSection(id) {
+      sections.forEach(section => {
+        section.style.display = section.id === id ? "block" : "none";
+      });
+    }
+
+    // Adiciona evento de clique às guias do menu
+    menuLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // impede comportamento padrão de ir para a âncora
+        const targetId = this.getAttribute("href").substring(1);
+        showSection(targetId);
+      });
+    });
+  });
+</script>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
