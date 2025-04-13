@@ -5,7 +5,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal do Agronegócio</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #004d40;
+      padding: 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 1.8em;
+    }
+    nav {
+      background-color: #00796b;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00796b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #004d40;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,17 +108,35 @@
   <section id="home">
     <h2>Bem-vindo ao Portal do Agronegócio</h2>
     <p>Conectamos inovação, sustentabilidade e produtividade para transformar o campo. Aqui você encontrará tudo sobre soluções agrícolas modernas, financiamento rural, e as últimas notícias do setor.</p>
-    <p>É com grande entusiasmo que apresentamos este portal dedicado a unir inovação e tradição no campo. Aqui, você encontrará soluções modernas para o agronegócio, com foco em sustentabilidade, tecnologias de ponta e capacitação para enfrentar os desafios do setor. </p>
-    <p>Nosso objetivo é promover o crescimento do agronegócio, oferecendo acesso a informações, serviços especializados e produtos que transformam a realidade do campo. Se você está em busca de novos conhecimentos, oportunidades de financiamento ou consultoria para otimizar sua produção, está no lugar certo. </p>
+    <p>É com grande entusiasmo que apresentamos este portal dedicado a unir inovação e tradição no campo. Aqui, você encontrará soluções modernas para o agronegócio, com foco em sustentabilidade, tecnologias de ponta e capacitação para enfrentar os desafios do setor.</p>
+    <p>Nosso objetivo é promover o crescimento do agronegócio, oferecendo acesso a informações, serviços especializados e produtos que transformam a realidade do campo. Se você está em busca de novos conhecimentos, oportunidades de financiamento ou consultoria para otimizar sua produção, está no lugar certo.</p>
     <p>Explore nossas seções e descubra como podemos ajudar a impulsionar sua jornada no mundo do agronegócio. Junte-se a nós na construção de um futuro mais próspero e sustentável para o setor agrícola!</p>
   </section>
 
   <section id="oque">
     <h2>O que é Agronegócio?</h2>
-    <p>O agronegócio é um dos setores mais importantes da economia brasileira e mundial. Ele engloba todas as atividades relacionadas à produção, industrialização e distribuição de produtos agropecuários. Isso inclui desde o cultivo de grãos e criação de animais, até a transformação desses produtos em bens de consumo e sua comercialização.</p>
-    <p>Esse setor envolve diversos agentes como produtores rurais, indústrias de insumos, cooperativas, transportadoras, comerciantes, exportadores e instituições financeiras. Além disso, o agronegócio é altamente dependente da tecnologia e inovação para aumentar a produtividade, reduzir impactos ambientais e garantir alimentos de qualidade para a população.</p>
-    <p>O Brasil se destaca mundialmente como um dos maiores exportadores de produtos agrícolas, sendo líder em diversas cadeias produtivas como soja, carne bovina, frango e café.</p>
-    <p>Com práticas sustentáveis, uso de inteligência artificial, automação no campo e crédito rural eficiente, o agronegócio representa o futuro do desenvolvimento econômico do país.</p>
+    <p>O agronegócio é um dos setores mais importantes da economia mundial, desempenhando um papel fundamental na geração de empregos, na segurança alimentar e no crescimento econômico de diversos países, especialmente do Brasil. Ele envolve um conjunto de atividades econômicas relacionadas à produção, industrialização, comercialização e distribuição de produtos agropecuários, abrangendo desde o cultivo de grãos e criação de animais até a transformação desses produtos em bens de consumo.</p>
+    <p><strong>A Cadeia Produtiva do Agronegócio</strong></p>
+    <p>O agronegócio é composto por uma cadeia produtiva complexa, que engloba diversos agentes e processos. O ciclo começa no campo, com os produtores rurais, que se dedicam ao cultivo de lavouras e à criação de animais. A partir desse ponto, o produto passa por várias etapas de processamento, como a agroindústria, que transforma a matéria-prima em produtos finais, e a distribuição, que inclui o transporte, a comercialização e a venda dos produtos no mercado interno e externo.</p>
+    <p>Dentro dessa cadeia, destacam-se os seguintes componentes:</p>
+    <ul>
+      <li><strong>Produtores Rurais:</strong> São os responsáveis pelo cultivo de alimentos e a criação de animais. Esses profissionais utilizam diversas técnicas de produção, muitas vezes aliadas a novas tecnologias, para garantir alta produtividade e qualidade no que é produzido.</li>
+      <li><strong>Indústrias Agropecuárias:</strong> Empresas que transformam os produtos brutos do campo em alimentos, bebidas, bioenergia, têxteis e outros produtos consumidos diariamente.</li>
+      <li><strong>Distribuição e Comercialização:</strong> Após o processamento, os produtos precisam ser transportados, armazenados e comercializados. Isso envolve uma extensa rede de logística e comércio que leva os produtos aos consumidores finais.</li>
+      <li><strong>Instituições Financeiras e Cooperativas:</strong> O agronegócio depende de crédito rural e financiamento para viabilizar a produção e o crescimento das atividades. Bancos e cooperativas agrícolas desempenham papel crucial ao oferecer soluções financeiras, além de orientar os produtores na escolha de melhores práticas financeiras.</li>
+    </ul>
+    <p><strong>A Importância do Agronegócio para a Economia Global</strong></p>
+    <p>O agronegócio é essencial para a segurança alimentar mundial. Ele é responsável por fornecer alimentos, fibras e matérias-primas essenciais à sobrevivência humana e à indústria. Além disso, é um setor que gera milhões de empregos diretamente nas fazendas, agroindústrias, transporte e distribuição de produtos, além de criar uma grande quantidade de empregos indiretos.</p>
+    <p>No Brasil, por exemplo, o agronegócio é o motor da economia, representando uma grande parcela do Produto Interno Bruto (PIB). O país é um dos maiores produtores e exportadores de commodities agrícolas como soja, milho, carne bovina, frango e café, contribuindo significativamente para o abastecimento global de alimentos e para o crescimento de diversas economias ao redor do mundo.</p>
+    <p><strong>Tecnologia e Inovação no Agronegócio</strong></p>
+    <p>Nos últimos anos, o agronegócio tem se modernizado com a introdução de tecnologias inovadoras. O uso de drones, sensores, big data, inteligência artificial e automação têm otimizado as operações agrícolas, tornando a produção mais eficiente e sustentável. A tecnologia tem permitido a agricultura de precisão, onde cada ação no campo é monitorada e ajustada de acordo com dados em tempo real, o que ajuda a reduzir custos, melhorar a qualidade dos produtos e aumentar os rendimentos das lavouras.</p>
+    <p>Além disso, o uso de biotecnologia, como sementes geneticamente modificadas, e a adoção de práticas agrícolas mais sustentáveis, como o uso de fertilizantes e pesticidas de baixo impacto ambiental, têm sido fundamentais para garantir a segurança alimentar, reduzir os impactos ambientais e melhorar a qualidade do solo.</p>
+    <p><strong>Desafios e Sustentabilidade</strong></p>
+    <p>Apesar de seu enorme potencial, o agronegócio enfrenta alguns desafios, como a necessidade de se adaptar às mudanças climáticas, a pressão por práticas mais sustentáveis e o aumento da demanda global por alimentos de qualidade. A sustentabilidade tem ganhado destaque, e práticas como a agricultura de baixo carbono, o uso racional de recursos naturais e a preservação de ecossistemas têm se tornado cada vez mais essenciais para a manutenção da produção no longo prazo.</p>
+    <p>É fundamental que o setor agrícola equilibre a busca por produtividade com a responsabilidade ambiental, garantindo que os recursos naturais sejam usados de forma eficiente e sem causar danos irreversíveis ao meio ambiente.</p>
+    <p><strong>Conclusão</strong></p>
+    <p>O agronegócio é uma força vital na economia mundial, não apenas por ser responsável pela produção de alimentos, mas também por ser um setor que gera emprego, promove inovações tecnológicas e sustenta o comércio global. No Brasil, o agronegócio continua a ser um pilar fundamental, e seu impacto se estende além das fronteiras nacionais, influenciando economias e mercados ao redor do mundo.</p>
+    <p>Com uma crescente ênfase em sustentabilidade, inovação e tecnologia, o agronegócio tem um papel central no futuro da humanidade, pois garante o fornecimento de alimentos e outros produtos essenciais, enquanto trabalha para proteger o meio ambiente e melhorar a qualidade de vida dos envolvidos neste vasto e dinâmico setor.</p>
   </section>
 
   <section id="servicos">
@@ -56,7 +155,7 @@
     <h2>Fale Conosco</h2>
     <p>Entre em contato para tirar dúvidas, solicitar consultoria ou saber mais sobre nossos serviços.</p>
     <p>Email: contato@fazendacancelier.com.br</p>
-    <p>Telefone: (41) 8002-8922 </p>
+    <p>Telefone: (41) 8002-8922</p>
     <form>
       <label for="nome">Nome:</label><br>
       <input type="text" id="nome" name="nome"><br>
