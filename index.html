@@ -1,27 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agronegócios Inovadores</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    /* Cabeçalho e Navegação */
+    header {
+      background: #228B22;
+      color: #fff;
+      padding: 20px 0;
+    }
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    nav .logo h1 {
+      font-size: 1.8em;
+    }
+    nav .menu {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    /* Container principal */
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    /* Seções */
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      margin-bottom: 10px;
+      color: #228B22;
+    }
+    .section p, .section ul {
+      margin-bottom: 10px;
+    }
+    .section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    /* Formulário de contato */
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #228B22;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #1e7a1e;
+    }
+    /* Rodapé */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    /* Responsividade */
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav .menu {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Cabeçalho com Logo -->
+  <!-- Cabeçalho e Menu de Navegação -->
   <header>
     <nav>
       <div class="logo">
-        <img src="FAZENDA.PNG" alt="Logo Fazenda" class="logo-img" />
         <h1>Agronegócios Inovadores</h1>
       </div>
       <div class="menu">
         <a href="#home">Home</a>
         <a href="#sobre">Sobre Nós</a>
-        <a href="#agronegocio">O que é Agronegócio?</a>
         <a href="#servicos">Serviços</a>
-        <a href="#sustentabilidade">Sustentabilidade</a>
         <a href="#produtos">Produtos</a>
         <a href="#noticias">Notícias/Blog</a>
         <a href="#depoimentos">Depoimentos</a>
@@ -30,6 +131,7 @@
     </nav>
   </header>
 
+  <!-- Conteúdo Principal -->
   <div class="container">
     <!-- Página Inicial -->
     <section id="home" class="section">
@@ -37,144 +139,71 @@
       <p>Conectando o campo à inovação. Explore nosso site para conhecer as soluções que transformam o agronegócio!</p>
     </section>
 
-    <!-- O que é o Agronegócio? -->
-    <section id="agronegocio" class="section">
-      <h2>O que é o Agronegócio?</h2>
-      <p>O agronegócio é um setor fundamental para a economia mundial, envolvendo diversas etapas, desde a produção até a comercialização de produtos agrícolas e pecuários.</p>
-      <p>O agronegócio engloba uma cadeia complexa, com atividades que vão desde a agricultura e pecuária até a agroindústria e serviços relacionados, como transporte e comercialização.</p>
-
-      <h3>Principais Segmentos do Agronegócio</h3>
-      <ul>
-        <li><strong>Produção Agrícola:</strong> Cultivo de grãos, legumes, frutas, e flores, além do cultivo de fibras como algodão.</li>
-        <li><strong>Pecuária:</strong> Criação de animais para produção de carne, leite, ovos e outros produtos de origem animal.</li>
-        <li><strong>Agroindústria:</strong> Indústrias responsáveis pelo processamento de alimentos, produtos derivados e biocombustíveis.</li>
-        <li><strong>Comércio e Logística:</strong> Distribuição e venda de produtos agrícolas e animais, tanto no mercado interno quanto para exportação.</li>
-      </ul>
-
-      <h3>Impacto Econômico do Agronegócio</h3>
-      <p>O agronegócio representa uma parcela significativa do PIB de muitos países, sendo um pilar fundamental da economia global. No Brasil, por exemplo, o setor é responsável por uma parte considerável das exportações, com destaque para produtos como soja, carne bovina, café e suco de laranja.</p>
-
-      <h3>Desafios e Oportunidades</h3>
-      <ul>
-        <li><strong>Desafios Ambientais:</strong> A pressão por práticas agrícolas mais sustentáveis e o uso eficiente dos recursos naturais.</li>
-        <li><strong>Inovação Tecnológica:</strong> A implementação de tecnologias como drones, sensores e inteligência artificial para melhorar a produtividade e reduzir impactos ambientais.</li>
-        <li><strong>Mercados Globais:</strong> A necessidade de competir e se adaptar às exigências de mercados internacionais cada vez mais exigentes.</li>
-        <li><strong>Segurança Alimentar:</strong> A crescente demanda por alimentos à medida que a população mundial cresce e as mudanças climáticas afetam a produção agrícola.</li>
-      </ul>
-    </section>
-
     <!-- Sobre Nós -->
     <section id="sobre" class="section">
       <h2>Sobre Nós</h2>
-      <p>Somos uma empresa dedicada a trazer inovações ao setor agropecuário, buscando soluções sustentáveis e eficientes para os produtores rurais. Trabalhamos com as mais recentes tecnologias para otimizar a produção e promover o desenvolvimento de novos mercados para nossos clientes.</p>
-      <p>Nosso time é formado por especialistas em diversas áreas, como agricultura, pecuária, agroindústria, sustentabilidade e tecnologia, garantindo que nossos serviços atendam a todas as necessidades do agronegócio moderno.</p>
+      <p>Somos um projeto dedicado a modernizar o agronegócio. Nossa história é marcada pela paixão pelo campo e pela busca incessante por soluções inovadoras.</p>
+      <p><strong>Missão:</strong> Prover soluções de alta qualidade para a gestão e produção agrícola.</p>
+      <p><strong>Visão:</strong> Ser referência em inovação no agronegócio, contribuindo para o desenvolvimento sustentável do setor.</p>
+      <p><strong>Valores:</strong> Transparência, inovação, sustentabilidade e responsabilidade.</p>
     </section>
 
     <!-- Serviços -->
     <section id="servicos" class="section">
       <h2>Serviços</h2>
-      <p>Oferecemos uma gama de serviços para impulsionar o crescimento do agronegócio:</p>
       <ul>
-        <li><strong>Consultoria Técnica:</strong> Soluções personalizadas para otimizar a produção agrícola e pecuária.</li>
-        <li><strong>Gestão de Propriedades:</strong> Acompanhamento completo para a gestão eficiente de propriedades rurais.</li>
-        <li><strong>Inovação em Tecnologias:</strong> Implementação de ferramentas tecnológicas como sistemas de monitoramento remoto e automação agrícola.</li>
-        <li><strong>Treinamentos e Capacitação:</strong> Cursos especializados para profissionais do setor, com foco em práticas sustentáveis e inovação tecnológica.</li>
+        <li>Consultoria agrícola</li>
+        <li>Gestão de propriedades rurais</li>
+        <li>Tecnologias para o campo (drones, sensores, softwares)</li>
+        <li>Comercialização de insumos (sementes, fertilizantes, defensivos)</li>
+        <li>Suporte técnico e capacitação</li>
       </ul>
-    </section>
-
-    <!-- Sustentabilidade -->
-    <section id="sustentabilidade" class="section">
-      <h2>Sustentabilidade no Agronegócio</h2>
-      <p>A sustentabilidade é um dos pilares que norteiam nosso trabalho. Buscamos práticas agrícolas que respeitem o meio ambiente, preservando recursos naturais e promovendo o bem-estar das comunidades locais.</p>
-      <p>Estamos comprometidos com o desenvolvimento de soluções agrícolas que integrem produtividade e preservação ambiental, como o uso de tecnologias que aumentem a eficiência e reduzam os impactos ambientais.</p>
     </section>
 
     <!-- Produtos -->
     <section id="produtos" class="section">
       <h2>Produtos</h2>
-      <p>Temos uma linha de produtos focados em melhorar a eficiência e a sustentabilidade das atividades agropecuárias, incluindo insumos, máquinas agrícolas e soluções tecnológicas inovadoras.</p>
-      <h3>Produtos em Destaque</h3>
-      <ul>
-        <li><strong>Fertilizantes Sustentáveis:</strong> Fertilizantes de alta performance com menor impacto ambiental.</li>
-        <li><strong>Máquinas de Precisão:</strong> Tratores e colheitadeiras equipados com tecnologias avançadas de monitoramento e automação.</li>
-        <li><strong>Bioinseticidas:</strong> Soluções orgânicas para controle de pragas e doenças nas lavouras.</li>
-      </ul>
+      <p>Conheça nosso catálogo de produtos, com descrição detalhada e benefícios de cada item.</p>
+      <p><em>Foto e ficha técnica de cada produto serão disponibilizadas em breve.</em></p>
     </section>
 
     <!-- Notícias / Blog -->
     <section id="noticias" class="section">
       <h2>Notícias / Blog</h2>
-      <p>Fique por dentro das últimas notícias e tendências do setor agropecuário. Aqui, publicamos artigos sobre inovações, boas práticas e muito mais!</p>
-      <h3>Últimas Postagens</h3>
-      <ul>
-        <li><a href="#">O Futuro da Agricultura de Precisão: Tendências e Desafios</a></li>
-        <li><a href="#">Tecnologia e Sustentabilidade: Como a Inovação Está Transformando o Campo</a></li>
-        <li><a href="#">Impacto das Mudanças Climáticas na Produção de Grãos</a></li>
-      </ul>
+      <p>Acompanhe as últimas tendências e dicas do agronegócio, inovações tecnológicas, e atualizações sobre mudanças climáticas e políticas do setor.</p>
     </section>
 
-    <!-- Depoimentos -->
+    <!-- Depoimentos / Casos de Sucesso -->
     <section id="depoimentos" class="section">
-      <h2>Depoimentos</h2>
-      <p>"Graças à parceria com a empresa, conseguimos aumentar nossa produção em 30%, utilizando tecnologias sustentáveis!" - Ana, Produtora Rural.</p>
-      <p>"A consultoria oferecida nos ajudou a reduzir custos e aumentar a eficiência da nossa operação." - Roberto, Pecuarista.</p>
+      <h2>Depoimentos / Casos de Sucesso</h2>
+      <p>Confira o que nossos clientes têm a dizer e veja os resultados alcançados com nossas soluções.</p>
     </section>
 
     <!-- Contato -->
     <section id="contato" class="section">
       <h2>Contato</h2>
-      <p>Entre em contato conosco para mais informações sobre nossos serviços ou para esclarecer dúvidas.</p>
-      <form action="#">
+      <p>Entre em contato conosco para mais informações ou para solicitar nossos serviços.</p>
+      <p><strong>Email:</strong> contato@agronegociosinovadores.com.br</p>
+      <p><strong>Telefone:</strong> (xx) xxxx-xxxx</p>
+      <p>Ou utilize o formulário de contato abaixo:</p>
+      <form action="#" method="post">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
-
+        <input type="text" id="nome" name="nome" required>
+        
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
+        <input type="email" id="email" name="email" required>
+        
         <label for="mensagem">Mensagem:</label>
         <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
+        
         <button type="submit">Enviar</button>
       </form>
     </section>
   </div>
 
-  <!-- Rodapé com logo da escola -->
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Agronegócios Inovadores. Todos os direitos reservados.</p>
-    <img src="escola.png" alt="Logo Escola" class="footer-logo" />
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll(".section");
-      const menuLinks = document.querySelectorAll(".menu a");
-
-      // Esconde todas as seções inicialmente, menos a Home
-      sections.forEach(section => {
-        if (section.id !== "home") {
-          section.style.display = "none";
-        }
-      });
-
-      // Função que mostra a seção clicada e esconde as outras
-      function showSection(id) {
-        sections.forEach(section => {
-          section.style.display = section.id === id ? "block" : "none";
-        });
-      }
-
-      // Adiciona evento de clique às guias do menu
-      menuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault(); // impede comportamento padrão de ir para a âncora
-          const targetId = this.getAttribute("href").substring(1);
-          showSection(targetId);
-        });
-      });
-    });
-  </script>
 </body>
-
 </html>
-
